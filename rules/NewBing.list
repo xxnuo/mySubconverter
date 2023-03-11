@@ -1,0 +1,8 @@
+# CHATGPT 的代理设置
+
+DOMAIN-SUFFIX,bing.com
+DOMAIN-SUFFIX,openai.com
+
+# Twitter
+
+DOMAIN-SUFFIX,twitter.com

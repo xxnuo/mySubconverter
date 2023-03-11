@@ -1,0 +1,17 @@
+### 代理补充
+
+# winget
+DOMAIN-SUFFIX,cdn.winget.microsoft.com
+DOMAIN-SUFFIX,storeedgefd.dsx.mp.microsoft.com
+
+DOMAIN-SUFFIX,cmscdn.papegames.com
+DOMAIN-SUFFIX,visualstudio.com
+DOMAIN-SUFFIX,edge.microsoft.com
+DOMAIN,az764295.vo.msecnd.net
+DOMAIN-SUFFIX,reddit.com
+PROCESS-NAME,sideloadly.exe
+
+#DOMAIN-SUFFIX,microsoft.com
+#DOMAIN-SUFFIX,mushroomtrack.com
+#DOMAIN-SUFFIX,alonestreaming.com
+#DOMAIN-SUFFIX,cdnlab.live

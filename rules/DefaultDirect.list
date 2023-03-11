@@ -1,0 +1,63 @@
+### 直连补充
+
+DOMAIN-SUFFIX,bigtear.com
+
+DOMAIN,speedtest.net
+DOMAIN-SUFFIX,baidu.com
+DOMAIN-SUFFIX,mozilla.com
+DOMAIN-SUFFIX,mozilla.org
+DOMAIN-SUFFIX,firefox.com
+DOMAIN,profile.accounts.firefox.com
+DOMAIN-SUFFIX,clash.bfsu.edu.cn
+DOMAIN-SUFFIX,ustc.edu.cn
+DOMAIN-SUFFIX,tsinghua.edu.cn
+DOMAIN-SUFFIX,mushroomtrack.com
+DOMAIN-SUFFIX,alonestreaming.com
+DOMAIN-SUFFIX,cdnlab.live
+DOMAIN-SUFFIX,bitwarden.com
+DOMAIN,clash.razord.top
+DOMAIN,gomirrors.org
+DOMAIN-SUFFIX,download-cdn.jetbrains.com
+DOMAIN-SUFFIX,mozilla.net
+DOMAIN-SUFFIX,tunnels.api.visualstudio.com
+DOMAIN-SUFFIX,sharepoint.com
+DOMAIN-SUFFIX,hellogithub.com
+
+DOMAIN,cdn.jsdelivr.net
+DOMAIN-SUFFIX,loli.net
+DOMAIN-SUFFIX,deepl.com
+
+# 确定全部流量需要直连国外的软件（例如qq不需要）
+
+# Steam 下载服务
+DOMAIN-SUFFIX,steamuserimages-a.akamaihd.net
+DOMAIN-SUFFIX,steampipe.akamaized.net
+
+# 命运2
+PROCESS-NAME,BEService_x64.exe,DIRECT 
+PROCESS-NAME,Destiny2.exe,DIRECT 
+PROCESS-NAME,destiny2launcher.exe,DIRECT 
+PROCESS-NAME,BEService_x64.exe,DIRECT
+
+# 雷神加速器
+PROCESS-NAME,leigod.exe,DIRECT 
+PROCESS-NAME,net_test.exe,DIRECT
+
+# 小黑盒
+DOMAIN-SUFFIX,max-c.com
+
+# 360云盘
+DOMAIN-SUFFIX,yunpan.com
+DOMAIN-SUFFIX,soboten.com
+
+# Golang Proxy
+DOMAIN,goproxy.io
+DOMAIN,proxy.golang.com.cn
+DOMAIN,gosum.io
+
+# npmmirror
+DOMAIN,npmmirror.com
+
+# Papago 翻译引擎
+DOMAIN,papago.naver.com
+DOMAIN,api.papago-chrome.com

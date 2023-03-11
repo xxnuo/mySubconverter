@@ -1,0 +1,1 @@
+nohup ./subconverter > ./nohup.out 2>&1 &
