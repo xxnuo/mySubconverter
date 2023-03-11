@@ -50,43 +50,127 @@ secret: "taurus"
 #hosts:
 #   '*.clash.dev': 127.0.0.1
 #   'alpha.clash.dev': '::1'
-
 dns:
-    # 是否启用dns
-    enable: true
-    ipv6: false
-    listen: 0.0.0.0:53
-    default-nameserver:
-        # - 192.168.1.1
-        - 114.114.114.114
-        # - 116.255.131.99
-        # - 192.168.124.1
-    # 模式：redir-host或fake-ip
-    fake-ip-range: 198.18.0.1/16 #
-    fake-ip-filter: # fake ip 白名单列表，如果你不知道这个参数的作用，请勿修改
-        - "*.lan"
-        - localhost.ptlogin2.qq.com
-    enhanced-mode: fake-ip
-    # enhanced-mode: redir-host
-    # use-hosts: true
-    nameserver:
-        - 114.114.114.114
-        # - tls://120.53.53.53
-        - tls://dot.pub
-        # - tls://dns.rubyfish.cn
-        # - https://doh.360.cn/dns-query
-    fallback:
-        - tls://8.8.4.4
-        - tls://1.0.0.1
-        # - tls://dns.google
-        # - https://dns.cloudflare.com/dns-query
-    fallback-filter:
-        geoip: true
-        geoip-code: CN
-        # 在这个网段内的 IP 地址会被考虑为被污染的 IP
-        ipcidr:
-            - 240.0.0.0/4
-            # - 0.0.0.0/32
+  enable: true
+  enhanced-mode: fake-ip
+  ipv6: false
+  listen: 0.0.0.0:53
+  default-nameserver:
+    - 114.114.114.114
+  nameserver:
+    - 114.114.114.114
+    - tls://dot.pub
+  # - tls://120.53.53.53
+  # - tls://dns.rubyfish.cn
+  # - https://doh.360.cn/dns-query
+  fallback:
+    - tls://8.8.4.4
+    - tls://1.0.0.1
+  # - tls://dns.google
+  # - https://dns.cloudflare.com/dns-query
+  fallback-filter:
+    geoip: true
+    geoip-code: CN
+    ipcidr: # 在这个网段内的 IP 地址会被考虑为被污染的 IP
+      - 0.0.0.0/8
+      - 10.0.0.0/8
+      - 100.64.0.0/10
+      - 127.0.0.0/8
+      - 169.254.0.0/16
+      - 172.16.0.0/12
+      - 192.0.0.0/24
+      - 192.0.2.0/24
+      - 192.88.99.0/24
+      - 192.168.0.0/16
+      - 198.18.0.0/15
+      - 198.51.100.0/24
+      - 203.0.113.0/24
+      - 224.0.0.0/4
+      - 240.0.0.0/4
+      - 255.255.255.255/32
+  fake-ip-range: 198.18.0.1/16
+  fake-ip-filter:
+    - WORKGROUP
+    - time.windows.com
+    - time.nist.gov
+    - time.apple.com
+    - time.asia.apple.com
+    - "*.ntp.org.cn"
+    - "*.openwrt.pool.ntp.org"
+    - time1.cloud.tencent.com
+    - time.ustc.edu.cn
+    - pool.ntp.org
+    - ntp.ubuntu.com
+    - ntp.aliyun.com
+    - ntp1.aliyun.com
+    - ntp2.aliyun.com
+    - ntp3.aliyun.com
+    - ntp4.aliyun.com
+    - ntp5.aliyun.com
+    - ntp6.aliyun.com
+    - ntp7.aliyun.com
+    - time1.aliyun.com
+    - time2.aliyun.com
+    - time3.aliyun.com
+    - time4.aliyun.com
+    - time5.aliyun.com
+    - time6.aliyun.com
+    - time7.aliyun.com
+    - "*.time.edu.cn"
+    - time1.apple.com
+    - time2.apple.com
+    - time3.apple.com
+    - time4.apple.com
+    - time5.apple.com
+    - time6.apple.com
+    - time7.apple.com
+    - time1.google.com
+    - time2.google.com
+    - time3.google.com
+    - time4.google.com
+    - music.163.com
+    - "*.music.163.com"
+    - "*.126.net"
+    - musicapi.taihe.com
+    - music.taihe.com
+    - songsearch.kugou.com
+    - trackercdn.kugou.com
+    - "*.kuwo.cn"
+    - api-jooxtt.sanook.com
+    - api.joox.com
+    - joox.com
+    - y.qq.com
+    - "*.y.qq.com"
+    - streamoc.music.tc.qq.com
+    - mobileoc.music.tc.qq.com
+    - isure.stream.qqmusic.qq.com
+    - dl.stream.qqmusic.qq.com
+    - aqqmusic.tc.qq.com
+    - amobile.music.tc.qq.com
+    - "*.xiami.com"
+    - "*.music.migu.cn"
+    - music.migu.cn
+    - "*.msftconnecttest.com"
+    - "*.msftncsi.com"
+    - localhost.ptlogin2.qq.com
+    - "*.*.*.srv.nintendo.net"
+    - "*.*.stun.playstation.net"
+    - xbox.*.*.microsoft.com
+    - "*.*.xboxlive.com"
+    - +.stun.*.*
+    - +.stun.*.*.*
+    - +.stun.*.*.*.*
+    - +.stun.*.*.*.*.*
+    - "*.n.n.srv.nintendo.net"
+    - +.stun.playstation.net
+tun:
+  enable: false
+  stack: gvisor
+  auto-route: true
+  auto-detect-interface: true
+  dns-hijack:
+    - any:53
+    # - any:853
 # 1. clash DNS 请求逻辑：
 #   (1) 当访问一个域名时， nameserver 与 fallback 列表内的所有服务器并发请求，得到域名对应的 IP 地址。
 #   (2) clash 将选取 nameserver 列表内，解析最快的结果。
