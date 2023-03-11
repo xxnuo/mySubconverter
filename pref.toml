@@ -184,7 +184,7 @@ target = "/getprofile?name=profile.ini&token=taurus"
 [server]
 listen = "0.0.0.0"
 # 教训！listen 不要设置成 127.0.0.1 会导致外部无法连接！
-port = 25500
+port = 25510
 # serve_file_root = "web"
 
 [advanced]
