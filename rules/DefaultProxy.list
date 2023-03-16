@@ -15,3 +15,6 @@ PROCESS-NAME,sideloadly.exe
 #DOMAIN-SUFFIX,mushroomtrack.com
 #DOMAIN-SUFFIX,alonestreaming.com
 #DOMAIN-SUFFIX,cdnlab.live
+
+# Zed 编辑器网站
+DOMAIN-SUFFIX,zed.dev

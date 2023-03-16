@@ -61,3 +61,8 @@ DOMAIN,npmmirror.com
 # Papago 翻译引擎
 DOMAIN,papago.naver.com
 DOMAIN,api.papago-chrome.com
+
+# 软件下载网站
+DOMAIN-SUFFIX,cr173.com
+DOMAIN-SUFFIX,xainjo.com
+DOMAIN-SUFFIX,pc6.com
